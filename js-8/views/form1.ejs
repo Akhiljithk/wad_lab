@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>User Regisration</h2>
+    <p>Please complete the following form to register</p>
+    <form action="/register" method="POST">
+        <label for=""> User name </label>
+        <input onchange="val_name()" type="text" name="username" id="name">
+        <span id="name_err"></span>
+        <br>
+        <br>
+        <label for=""> Password </label>
+        <input onchange="pass()" type="password" name="password" id="password">
+        <span id="pas_err"></span>
+        <br>
+        <br>
+        <label for=""> Select a package</label>
+        <select onchange="val_dd()" name="plan" id="dd">
+            <option value="1"> 1 yr plan </option>
+            <option value="2"> 2 yr plan</option>
+            <option value="100"> 100 yr plan</option>
+            <option value="500"> 500 yr plan</option>
+        </select>
+        <span id="err_dd"></span>
+        <br>
+        <br>
+
+        <label for=""> check to agree terms and conditions</label>
+
+        <input type="checkbox" value="checked" name="agree" id="check">
+        <span id="checkbox"></span>
+        <br>
+        <br>
+        <button onclick="submit_data()" id="btn" type="submit">register</button>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+* {
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.allcards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: position 2s;
+}
+
+.card {
+    width: 150px;
+    background-color: azure;
+    margin: 40px;
+    transition: visibility 2s;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 20px 0px #766060;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+
+}

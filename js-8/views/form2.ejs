@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form action="/getData" method="POST">
+        <label for="name">User Name:</label>
+        <input name="username" onchange="validateName()" style="margin-left:50px;" id="name" type="text">
+        <span id="userNameMsg" style="margin:0; padding:0;">
+        </span>
+        <br>
+        <div style="margin-top: 10px;">
+            <label for="name">Password:</label>
+            <input name="password" onChange="validatePassword()" style="margin-left:61px;" id="password"
+                type="password">
+            <span id="passwordMsg" style="margin:0; padding:0;">
+            </span>
+        </div>
+        <button type="submit" id="btn" style="margin-top: 5px; margin-left: 235px;"
+            onclick="submitData()">Register</button>
+    </form>
+    <p id="msg" style="color: red;"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+
+
+</head>
+
+<body>
+    <h2>todo</h2>
+    <div id="box">
+        <input type="text" id="textfeild">
+        <button id="add">add</button>
+
+    </div>
+
+
+    <ul id="content">
+        <li>"chumma"
+            <button id="del">delete</button>
+        </li>
+
+    </ul>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#add").on("click", function () {
+                var i = $("#textfeild").val();
+                if (i != "") {
+                    $("ul").append("<li>" + i + "<button id='del'>delete</button>" + "</li > ")
+                    $("li").on("click", "#del", function () {
+                        $(this).parent().hide()
+                    })
+                    $("li").on("click", function () {
+                        $(this).css("background-color", "yellow")
+                    })
+
+
+                }
+
+            })
+            $("li").on("click", "#del", function () {
+                $(this).parent().hide()
+            })
+            $("li").on("click", function () {
+                $(this).css("background-color", "yellow")
+            })
+        })
+    </script>
+</body>
+
+
+</html>

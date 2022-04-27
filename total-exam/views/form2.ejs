@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav style="display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+    height: 30px;
+    margin-bottom: 10px;">
+        <a href="/">home</a>
+        <a href="/form1">registration</a>
+        <a href="/form2">login</a>
+    </nav>
+    <h2>login page</h2>
+    <p>enter usernmae and password</p>
+    <form action="/compare" method="POST">
+        <label for="">username</label>
+        <input onchange="val_name()" type="text" id="name" name="username">
+        <br><br>
+
+        <label for="">password</label>
+        <input onchange="val_pass()" type="password" id="pass">
+        <br><br>
+
+        <input type="submit" value="login">
+    </form>
+
+</body>
+
+</html>

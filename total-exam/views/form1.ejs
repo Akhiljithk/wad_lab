@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+
+
+</head>
+
+<body>
+    <nav style="display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+    height: 30px;
+    margin-bottom: 10px;">
+        <a href="/">home</a>
+        <a href="/form1">registration</a>
+        <a href="/form2">login</a>
+    </nav>
+
+    <h2>User registration</h2>
+    <p>Please complete the follwing form to register</p>
+    <form onsubmit="return check()" action="/reg" method="POST">
+
+        <label for="">username</label>
+        <input onchange="v_name()" type="text" id="name" name="username">
+        <span id="err_name"></span>
+        <br><br>
+
+        <label for="">password</label>
+        <input onchange="v_pass()" type="text" id="password" name="password">
+        <span id="err_password"></span>
+        <br><br>
+
+        <label for="">select a package</label>
+        <select onchange="v_pack()" name="package" id="package">
+            <option value="1">1 month</option>
+            <option value="2">6 months</option>
+            <option value="3">1 year</option>
+        </select>
+        <span id="err_pack"></span>
+        <br><br>
+
+        <label for="">Check to agree to terms and conditions</label>
+        <input type="checkbox" name="" id="check">
+        <span id="err_check"></span>
+        <br><br>
+
+        <input type="submit" value="register">
+    </form>
+    <script src="form1.js"> </script>
+
+
+</body>
+
+</html>
